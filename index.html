@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login · Sign Up</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <!-- Decorative SVG / Graphic -->
+    <div class="hero-graphic" aria-hidden="true">
+      <!-- Subtle animated gradient blob -->
+      <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1">
+            <stop offset="0%" stop-color="var(--accent-1)"/>
+            <stop offset="100%" stop-color="var(--accent-2)"/>
+          </linearGradient>
+        </defs>
+        <g opacity="0.18">
+          <path class="blob" fill="url(#g1)"></path>
+        </g>
+      </svg>
+    </div>
+
+    <section class="card-container">
+      <div class="card auth-card" id="authCard" aria-live="polite">
+
+        <!-- Switcher -->
+        <div class="form-switcher">
+          <button id="switchLogin" class="switch active">Login</button>
+          <button id="switchSignup" class="switch">Sign Up</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="form active" autocomplete="on" novalidate>
+          <h2>Welcome back</h2>
+          <p class="muted">Sign in to continue to your account</p>
+
+          <label class="field">
+            <input name="email" type="email" placeholder="Email" required />
+            <span class="label">Email</span>
+          </label>
+
+          <label class="field">
+            <input name="password" type="password" placeholder="Password" minlength="6" required />
+            <span class="label">Password</span>
+          </label>
+
+          <div class="row between">
+            <label class="checkbox">
+              <input type="checkbox" name="remember" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="muted small">Forgot?</a>
+          </div>
+
+          <button type="submit" class="btn primary">Sign in</button>
+
+          <div class="or">or continue with</div>
+
+          <div class="socials">
+            <button type="button" class="btn ghost">Google</button>
+            <button type="button" class="btn ghost">GitHub</button>
+            
+          </div>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signupForm" class="form" autocomplete="on" novalidate>
+          <h2>Create account</h2>
+          <p class="muted">Start your journey — it’s free</p>
+
+          <label class="field">
+            <input name="name" type="text" placeholder="Full name" required />
+            <span class="label">Full name</span>
+          </label>
+
+          <label class="field">
+            <input name="email" type="email" placeholder="Email" required />
+            <span class="label">Email</span>
+          </label>
+
+          <label class="field">
+            <input name="password" type="password" placeholder="Password" minlength="6" required />
+            <span class="label">Password</span>
+          </label>
+
+          <label class="field">
+            <input name="confirmPassword" type="password" placeholder="Confirm password" minlength="6" required />
+            <span class="label">Confirm password</span>
+          </label>
+
+          <button type="submit" class="btn primary">Create account</button>
+
+          <p class="muted small">By continuing you accept our <a href="#">Terms</a>.</p>
+        </form>
+
+        <!-- Theme customizer button -->
+        <div class="theme-tools">
+          <button id="openTheme" class="btn mini">Customize theme</button>
+        </div>
+
+        <!-- form footer small -->
+        <footer class="card-foot muted small">Designed with Dev kumar — animated, responsive, accessible</footer>
+      </div>
+    </section>
+
+    <!-- Theme panel (hidden by default) -->
+    <aside id="themePanel" class="theme-panel" aria-hidden="true">
+      <header>
+        <strong>Customize theme</strong>
+        <button id="closeTheme" class="btn icon">✕</button>
+      </header>
+
+      <div class="panel-body">
+        <div class="option">
+          <label>Mode</label>
+          <div class="modes">
+            <button class="mode" data-mode="light">Light</button>
+            <button class="mode" data-mode="dark">Dark</button>
+          </div>
+        </div>
+
+        <div class="option">
+          <label>Accent color</label>
+          <div class="accents">
+            <button class="accent" data-accent="blue" aria-label="Blue"></button>
+            <button class="accent" data-accent="purple" aria-label="Purple"></button>
+            <button class="accent" data-accent="green" aria-label="Green"></button>
+            <button class="accent" data-accent="orange" aria-label="Orange"></button>
+          </div>
+        </div>
+
+        <div class="option">
+          <label>Motion</label>
+          <div class="modes">
+            <button class="motion" data-motion="full">Full</button>
+            <button class="motion" data-motion="reduced">Reduced</button>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <button id="resetTheme" class="btn ghost">Reset</button>
+        <button id="saveTheme" class="btn primary">Apply</button>
+      </footer>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
